@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background:
+        radial-gradient(circle at top left, #72e5f5, transparent 45%),
+        linear-gradient(135deg, #102d62, #4169e1 55%, #8b5cf6);
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(18px);
+}
+
+h1 {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    margin: 10px 0 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+#city-input {
+    width: 0;
+    min-width: 0;
+    flex: 1;
+    padding: 14px;
+    color: #172554;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    outline: none;
+    font-size: 15px;
+}
+
+#city-input:focus {
+    border-color: #a5f3fc;
+}
+
+#search-btn {
+    padding: 13px 17px;
+    border: none;
+    border-radius: 14px;
+    background: #fbbf24;
+    color: #172554;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#search-btn:hover {
+    background: #fde68a;
+    transform: translateY(-2px);
+}
+
+#search-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#message {
+    margin-top: 14px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.weather-info {
+    margin-top: 28px;
+}
+
+#city-name {
+    font-size: 24px;
+}
+
+#weather-icon {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 65px;
+}
+
+#weather-icon img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+#temperature {
+    margin: 0 0 8px;
+    font-size: 54px;
+    letter-spacing: -2px;
+}
+
+#description {
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+..details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;.details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.detail-box {
+    min-width: 0;
+    padding: 16px 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 520px) {
+    .details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+}
+
+.detail-box {
+    min-width: 0;
+    padding: 16px 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.detail-box span {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+}
+
+.detail-box strong {
+    display: block;
+    overflow-wrap: anywhere;
+    font-size: 17px;
+}
+
+@media (min-width: 520px) {
+    .details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+/* Weather details layout fix */
+.weather-container .details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.weather-container .detail-box {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 16px 8px;
+    text-align: center;
+}
+
+@media (min-width: 520px) {
+    .weather-container .details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+.unit-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.unit-toggle button {
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.unit-toggle button.active {
+    background: #fbbf24;
+    color: #172554;
+    border-color: #fbbf24;
+}
+
+.unit-toggle button:hover {
+    transform: translateY(-2px);
+}
+#weather-icon img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+}
